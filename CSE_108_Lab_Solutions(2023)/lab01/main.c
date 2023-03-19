@@ -1,5 +1,5 @@
 #include <stdio.h>
-void fizzbuzz(void)
+int fizzbuzz(void)
 {
     //PART 1
     printf("__PART 1__\n\n");
@@ -11,26 +11,20 @@ void fizzbuzz(void)
        printf("please enter a number between 1-100: ");
        scanf("%d", &num);
     }
-
-    switch(num <= 50 && num >= 5 && num % 3 == 0)
+    while(num <= 50 && num >= 5 && num % 3 == 0)
     {
-        case 1:
             printf("FizzBuzz");
-            return;
+            return(0);
     }
-
-    switch(num <= 50 && num >= 5)
+    while(num <= 50 && num >= 5)
     {
-        case 1:
             printf("Buzz");
-            return;
+            return(0);
     }
-
-    switch(num % 3 == 0)
+    while(num % 3 == 0)
     {
-        case 1:
             printf("Fizz");
-            return;
+            return(0);
     }
 }
 

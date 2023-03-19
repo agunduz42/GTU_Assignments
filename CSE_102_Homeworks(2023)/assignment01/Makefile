@@ -1,15 +1,17 @@
-CC = gcc
 TARGET = test
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRC = main.c
+SRC = main.c util.c
 
 all: compile run
 
 compile:
-	$(CC) -o $(TARGET) $(CFLAGS) $(SRC)
+	gcc $(CFLAGS) -o $(TARGET) $(SRC) -lm
 
-run:
-	./(TARGET)
+run: compile
+	./$(TARGET)
 
 clean:
 	rm -rf $(TARGET)
+
+.PHONY = all compile run clean
