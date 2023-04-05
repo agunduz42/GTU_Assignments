@@ -7,7 +7,7 @@ all: clean compile run
 compile: main.c util.c util.h
 	@echo "-------------------------------------------"
 	@echo "Compiling..."
-	@gcc -o $(TARGET) $(SRC)
+	@gcc -o $(TARGET) $(SRC) -lm
 
 run:
 	@echo "-------------------------------------------"

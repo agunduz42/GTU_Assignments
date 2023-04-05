@@ -7,4 +7,6 @@ void part_two();
 
 void part_three();
 
+double calculation(char operation);
+
 #endif

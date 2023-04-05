@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "util.h"
 
 void part_one() {
@@ -14,6 +15,52 @@ void part_one() {
     printf("**************************\n");
 }
 
+double calculation(char operation) {
+    double nb1, nb2;
+    printf("Enter the 1st operand: ");
+    scanf(" %lf", &nb1);
+    getchar();
+    switch(operation) {
+        case '+': {
+            printf("\nEnter the 2nd operand: ");
+            scanf(" %lf", &nb2);
+            getchar();
+            return(nb1 + nb2);
+        }
+        
+        case '-': {
+            printf("\nEnter the 2nd operand: ");
+            scanf(" %lf", &nb2);
+            return(nb1 - nb2);
+        }
+
+        case '/': {
+            printf("\nEnter the 2nd operand: ");
+            scanf(" %lf", &nb2);
+            return(nb1 / nb2);
+        }
+
+        case '*': {
+            printf("\nEnter the 2nd operand: ");
+            scanf(" %lf", &nb2);
+            return(nb1 * nb2);
+        }
+
+        case '%': {
+            printf("\nEnter the 2nd operand: ");
+            scanf(" %lf", &nb2);
+            return(fmod(nb1, nb2));
+        }
+
+        case '!': {
+            int i, result = 1;
+            for(i = 1; i <= nb1; i++)
+                result *= i;
+            return(result);
+        }
+    }
+}
+
 void part_two() {
     char format, operation;
     int m,n, operand;
@@ -22,7 +69,7 @@ void part_two() {
     printf("**************************\n");
     printf("Enter the format of output (S or I): ");
     scanf(" %c", &format);
-
+    getchar();
     while(format != 'S' && format != 'I')
     {
         printf("Invalid format!\n");
@@ -31,10 +78,20 @@ void part_two() {
     }
 
     printf("Enter m and n values: ");
-    scanf("%d %d", &m, &n);
+    scanf(" %d %d", &m, &n);
     getchar();
+    if(n > m) {
+        printf("m value can NOT be greater than n value\n");
+        return;
+    }
     printf("Enter the operation(+,-,/,*,%%,!): ");
     scanf(" %c", &operation);
+    getchar();
+    double result = calculation(operation);
+    if(format == 'I')
+        printf("result: %0.lf\n", result);
+    else
+        printf("result: %0*.*e\n", m+5, n, result);
 }
 
 void part_three() {
