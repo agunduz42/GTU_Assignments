@@ -11,7 +11,7 @@
 void map_create(int map_size, int door_row, int door_col, int player_row, int player_col);
 int check_if_player_reached_door(int door_row, int door_col, int player_row, int player_col);
 int gameplay(int map_size, int door_row, int door_col, int player_row, int player_col);
-int simple_menu(void);
+int show_menu(void);
 void invalid_movement(void);
 //func prototypes
 
@@ -108,7 +108,7 @@ void map_create(int map_size, int door_row, int door_col, int player_row, int pl
         printf("-");    //bottom border
 }
 
-int simple_menu() {
+int show_menu() {
     int menu_choice = 1, map_size, door_row, door_col, player_row, player_col, move_counter;
     printf("\nWelcome to the 2D puzzle game!\n");
     while(1) {
@@ -168,6 +168,6 @@ int simple_menu() {
 }
 
 int main() {
-    simple_menu();
+    show_menu();
     return(0);
 }

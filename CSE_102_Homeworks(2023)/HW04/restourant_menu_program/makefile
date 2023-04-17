@@ -1,12 +1,11 @@
 CC = gcc
 SRC = main.c
 TARGET = test
-CFLAGS = -Wall -Wextra -Werror
 
 all: compile run
 
 compile: $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+	$(CC) $(SRC) -o $(TARGET)
 
 run: test
 	./$(TARGET)

@@ -1,9 +1,11 @@
 Product  Price (TL) 
-Kebap  75.99 
-Lahmacun 21.50 
-Pide  40.00 
-Döner  55.60 
+Kebap  180.00 
+Lahmacun 25.00 
+Pide  75.00 
+Midye  10.00 
 Kola  15.00 
 Su  5.00 
-Künefe   60.00 
-Sütlaç  32.50
+Pizza   150.00 
+Makarna 80.00
+Cigkofte 20.00
+Hamburger 87.50
