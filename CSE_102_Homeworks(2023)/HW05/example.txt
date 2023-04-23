@@ -1,0 +1,5 @@
+Homework Description: You will write a C file with the main function with three additional functions 
+described below. Your program will start calling part1, part2, and part3 functions in that order. For 
+each part, you will receive the inputs from the user and print the output to the console. Details of 
+the parts are further discussed below. Please pay attention to the output format. Any deviation from 
+the shared format may be penalized regardless of the correct execution
