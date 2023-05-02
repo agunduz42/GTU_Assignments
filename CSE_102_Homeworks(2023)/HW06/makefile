@@ -1,16 +1,18 @@
 TARGET = test
-SRC = main.c
+SRC = main.c util.c util.h
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
 
 all: compile run
 
 compile: $(SRC)
-	$(CC) -o $(TARGET) $(CFLAGS) $(SRC)
+	@$(CC) -o $(TARGET) $(SRC)
+	@echo "_____Compile Success_____"
 
 run: $(TARGET)
-	./$(TARGET)
+	@echo "_____$(TARGET) Executed_____"
+	@./$(TARGET)
+	@echo "\n_____$(TARGET) Completed_____"
 
 clean:
-	rm -rf *.out
-	rm -rf $(TARGET)
+	@rm -rf *.out
+	@rm -rf $(TARGET)

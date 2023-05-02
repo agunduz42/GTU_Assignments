@@ -1,0 +1,11 @@
+1,1,Istanbul,34
+2,2,Kocaeli,41
+3,3,Ankara,0
+4,4,Izmir,60
+5,5,Bursa,45
+6,6,Antalya,0
+7,7,Gaziantep,30
+8,8,Kayseri,50
+9,9,Mersin,45
+10,10,Samsun,55
+11,11,Ankara,0

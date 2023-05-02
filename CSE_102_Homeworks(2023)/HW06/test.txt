@@ -1,0 +1,6 @@
+1,D,Ayran,Sutas,20.5
+2,F,Simit,Firin,8.0
+4,O,Pecete,Selpak,15.00
+5,D,Kola,CocaCola,12.0
+6,F,Borek,Cigdem,25.00
+6,F,Borek,Cigdem,25.00
